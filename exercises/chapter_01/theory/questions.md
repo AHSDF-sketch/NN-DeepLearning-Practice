@@ -1,16 +1,15 @@
-# 《导论.doc》神经网络与深度学习题库（修复交互版）
-所有选项可点击、填空框可输入，提交后仅显示当前题答案。
+# 《导论.doc》神经网络与深度学习题库（功能全正常）
+所有题型支持交互：选择题可选中、填空题可输入提交、论述题折叠无乱码。
 
-## 一、单选题（点击选项后提交）
+## 一、单选题（点击选项选中，提交显答案）
 ### 1. 在神经网络中，输入层的主要作用是什么？
 <div style="margin: 10px 0; padding-left: 20px;">
-  <!-- 修复：input的id与label的for严格对应，name每题唯一 -->
-  <input type="radio" name="single1" id="s1-C" value="C"> <label for="s1-C">A、对数据进行非线性变换</label><br>
+  <input type="radio" name="single1" id="s1-A" value="A"> <label for="s1-A">A、对数据进行非线性变换</label><br>
   <input type="radio" name="single1" id="s1-B" value="B"> <label for="s1-B">B、对数据进行归一化处理</label><br>
-  <input type="radio" name="single1" id="s1-A" value="A"> <label for="s1-A">C、接收外部输入的数据</label><br>
+  <input type="radio" name="single1" id="s1-C" value="C"> <label for="s1-C">C、接收外部输入的数据</label><br>
   <input type="radio" name="single1" id="s1-D" value="D"> <label for="s1-D">D、对数据进行降维处理</label>
 </div>
-<button onclick="checkSingle('single1', 's1-A', '解析：输入层是神经网络的第一层，其主要职责是接收外部输入的数据，如图像的像素值、文本的词向量等，为后续的处理提供原始信息。')">提交答案</button>
+<button onclick="checkSingle('single1', 's1-C', '解析：输入层是神经网络的第一层，其主要职责是接收外部输入的数据，如图像的像素值、文本的词向量等，为后续的处理提供原始信息。')">提交答案</button>
 <div id="res-single1" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
 
 
@@ -40,14 +39,14 @@
 <div style="margin: 10px 0; padding-left: 20px;">
   <input type="radio" name="single4" id="s4-A" value="A"> <label for="s4-A">A、均方误差（MSE）</label><br>
   <input type="radio" name="single4" id="s4-B" value="B"> <label for="s4-B">B、交叉熵损失</label><br>
-  <input type="radio" name="single4" id="s4-C" value="C"> <label for="s4-C">C、Triplet Loss</label><br>
-  <input type="radio" name="single4" id="s4-D" value="D"> <label for="s4-D">D、Hinge Loss</label>
+  <input type="radio" name="single4" id="s4-C" value="C"> <label for="s4-C">C、Triplet Loss（三重态损耗）</label><br>
+  <input type="radio" name="single4" id="s4-D" value="D"> <label for="s4-D">D、Hinge Loss（铰链损耗）</label>
 </div>
 <button onclick="checkSingle('single4', 's4-B', '解析：交叉熵损失函数常用于分类任务，因为它能够衡量预测概率分布与真实分布之间的差异，从而指导模型优化。')">提交答案</button>
 <div id="res-single4" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
 
 
-## 二、多选题（可多选，点击选项后提交）
+## 二、多选题（点击选项多选，提交显答案）
 ### 5. 下列哪些是神经网络的基本组成部分？
 <div style="margin: 10px 0; padding-left: 20px;">
   <input type="checkbox" name="multi5" id="m5-A" value="A"> <label for="m5-A">A、输入层</label><br>
@@ -77,8 +76,8 @@
   <input type="checkbox" name="multi7" id="m7-A" value="A"> <label for="m7-A">A、SGD</label><br>
   <input type="checkbox" name="multi7" id="m7-B" value="B"> <label for="m7-B">B、Adam</label><br>
   <input type="checkbox" name="multi7" id="m7-C" value="C"> <label for="m7-C">C、RMSProp</label><br>
-  <input type="checkbox" name="multi7" id="m7-D" value="D"> <label for="m7-D">D、LSTM</label><br>
-  <input type="checkbox" name="multi7" id="m7-E" value="E"> <label for="m7-E">E、ResNet</label>
+  <input type="checkbox" name="multi7" id="m7-D" value="D"> <label for="m7-D">D、LSTM（循环神经网络结构）</label><br>
+  <input type="checkbox" name="multi7" id="m7-E" value="E"> <label for="m7-E">E、ResNet（深度残差网络模型）</label>
 </div>
 <button onclick="checkMulti('multi7', ['m7-A','m7-B','m7-C'], '解析：SGD、Adam 和 RMSProp 是常用的优化器，用于在训练过程中调整神经网络的参数，以最小化损失函数。')">提交答案</button>
 <div id="res-multi7" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
@@ -88,15 +87,15 @@
 <div style="margin: 10px 0; padding-left: 20px;">
   <input type="checkbox" name="multi8" id="m8-A" value="A"> <label for="m8-A">A、图像分类</label><br>
   <input type="checkbox" name="multi8" id="m8-B" value="B"> <label for="m8-B">B、目标检测</label><br>
-  <input type="checkbox" name="multi8" id="m8-C" value="C"> <label for="m8-C">C、语音识别</label><br>
+  <input type="checkbox" name="multi8" id="m8-C" value="C"> <label for="m8-C">C、语音识别（NLP领域）</label><br>
   <input type="checkbox" name="multi8" id="m8-D" value="D"> <label for="m8-D">D、图像分割</label><br>
-  <input type="checkbox" name="multi8" id="m8-E" value="E"> <label for="m8-E">E、自然语言处理</label>
+  <input type="checkbox" name="multi8" id="m8-E" value="E"> <label for="m8-E">E、自然语言处理（NLP领域）</label>
 </div>
 <button onclick="checkMulti('multi8', ['m8-A','m8-B','m8-D'], '解析：图像分类、目标检测和图像分割是深度学习在计算机视觉中的典型应用，而语音识别和自然语言处理则更多应用于NLP领域。')">提交答案</button>
 <div id="res-multi8" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
 
 
-## 三、判断题（点击选项后提交）
+## 三、判断题（点击选项选中，提交显答案）
 ### 9. 神经网络的隐藏层数越多，模型的表达能力一定越强。
 <div style="margin: 10px 0; padding-left: 20px;">
   <input type="radio" name="judge9" id="j9-T" value="正确"> <label for="j9-T">正确</label><br>
@@ -151,11 +150,10 @@
 <div id="res-judge23" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
 
 
-## 四、填空题（可输入文本，提交后显答案）
+## 四、填空题（输入文本，提交显答案）
 ### 13. 神经网络的基本组成单元是______，它由输入、权重、偏置、求和函数和______等部分构成。
 <div style="margin: 10px 0; padding-left: 20px;">
-  <!-- 修复：输入框可点击，id唯一 -->
-  <input type="text" id="fill13" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="答案用逗号分隔，如“xx, xx”">
+  <input type="text" id="fill13" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="答案用逗号分隔，如“神经元,激活函数”">
 </div>
 <button onclick="checkFill('fill13', '神经元,激活函数', '解析：神经元是神经网络的基本组成单元，其结构包括输入、权重、偏置、求和函数和激活函数，用于模拟生物神经元的功能。')">提交答案</button>
 <div id="res-fill13" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
@@ -163,7 +161,7 @@
 
 ### 14. 卷积神经网络（CNN）主要包括卷积层、______和全连接层三个核心部分。
 <div style="margin: 10px 0; padding-left: 20px;">
-  <input type="text" id="fill14" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="填写单个答案">
+  <input type="text" id="fill14" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="填写单个答案，如“池化层”">
 </div>
 <button onclick="checkFill('fill14', '池化层', '解析：CNN 的基本结构包括卷积层、池化层和全连接层，分别用于特征提取、特征压缩和最终分类。')">提交答案</button>
 <div id="res-fill14" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
@@ -171,7 +169,7 @@
 
 ### 15. 在神经网络中，______函数用于衡量预测值与真实值之间的差距，常见的有均方误差和______损失。
 <div style="margin: 10px 0; padding-left: 20px;">
-  <input type="text" id="fill15" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="答案用逗号分隔，如“xx, xx”">
+  <input type="text" id="fill15" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="答案用逗号分隔，如“损失,交叉熵”">
 </div>
 <button onclick="checkFill('fill15', '损失,交叉熵', '解析：损失函数用于量化模型预测与真实值之间的差距，是训练神经网络的重要指标。')">提交答案</button>
 <div id="res-fill15" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
@@ -179,19 +177,19 @@
 
 ### 16. 反向传播算法通过计算损失函数相对于参数的______，指导神经网络的参数更新。
 <div style="margin: 10px 0; padding-left: 20px;">
-  <input type="text" id="fill16" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="填写单个答案">
+  <input type="text" id="fill16" style="width: 400px; padding: 6px; border: 1px solid #ccc;" placeholder="填写单个答案，如“梯度”">
 </div>
 <button onclick="checkFill('fill16', '梯度', '解析：反向传播算法利用梯度下降法，根据损失函数的梯度调整神经网络的参数，以最小化误差。')">提交答案</button>
 <div id="res-fill16" style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;"></div>
 
 
-## 五、论述题（点击查看答案）
+## 五、论述题（点击折叠框查看答案，无乱码）
 ### 17. 请简述神经网络与深度学习的关系。
 <details style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;">
   <summary style="cursor: pointer; font-weight: bold;">点击查看答案</summary>
   <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ccc;">
     <strong>答案</strong>：神经网络是深度学习的基础，深度学习则是神经网络的进一步发展。深度学习通过构建多层神经网络，实现了对数据的自动特征提取和复杂模式识别，是当前人工智能领域的重要技术。<br><br>
-    <strong>解析</strong>：神经网络为深度学习提供了结构基础，而深度学习则通过增加网络深度和引入新技术，提升了模型的表达能力和应用效果。
+    <strong>解析</strong>：神经网络为深度学习提供了结构基础，而深度学习则通过增加网络深度和引入新技术（如卷积、循环结构），提升了模型的表达能力和应用效果。
   </div>
 </details>
 
@@ -200,8 +198,8 @@
 <details style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;">
   <summary style="cursor: pointer; font-weight: bold;">点击查看答案</summary>
   <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ccc;">
-    <strong>答案</strong>：CNN 通过卷积操作提取图像的局部特征，结合池化层进行特征压缩，能够高效地处理高维图像数据，同时减少参数数量，提高模型的泛化能力。<br><br>
-    <strong>解析</strong>：CNN 的局部感受野和权值共享机制使其在图像识别任务中表现优异，尤其适合处理具有空间结构的数据。
+    <strong>答案</strong>：CNN在图像识别中的优势主要有三点：①通过卷积操作提取图像局部特征（如边缘、纹理），适配图像的空间结构特性；②通过权值共享大幅减少参数数量，降低过拟合风险和计算成本；③通过池化层（如最大池化）压缩特征维度，增强模型对图像平移、缩放的鲁棒性。<br><br>
+    <strong>解析</strong>：传统全连接神经网络将图像拉平为一维向量，丢失空间信息且参数冗余；CNN保留图像二维结构，通过局部感知和权值共享，在保证精度的同时提升效率。
   </div>
 </details>
 
@@ -210,8 +208,8 @@
 <details style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;">
   <summary style="cursor: pointer; font-weight: bold;">点击查看答案</summary>
   <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ccc;">
-    <strong>答案</strong>：激活函数是神经网络中引入非线性的关键组件，其作用是将神经元的线性输出转换为非线性输出，使模型能够拟合复杂的数据分布。<br><br>
-    <strong>解析</strong>：如果没有激活函数，无论神经网络有多少层，其整体仍然是一个线性模型，无法处理复杂的数据模式。
+    <strong>答案</strong>：激活函数是定义在神经网络神经元上的非线性函数，核心作用是将神经元的线性输出（加权和+偏置）转换为非线性输出。它是神经网络引入非线性的关键，若没有激活函数，无论网络有多少层，整体仍为线性模型，无法拟合复杂数据。<br><br>
+    <strong>解析</strong>：常见的激活函数（如ReLU、sigmoid）通过不同非线性映射，使模型能处理异或、图像分类等非线性问题，是深度学习拟合复杂模式的基础。
   </div>
 </details>
 
@@ -220,8 +218,8 @@
 <details style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;">
   <summary style="cursor: pointer; font-weight: bold;">点击查看答案</summary>
   <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ccc;">
-    <strong>答案</strong>：反向传播算法通过计算损失函数相对于网络参数的梯度，从输出层向输入层逐层传播误差，利用梯度下降法更新参数，以最小化损失函数。<br><br>
-    <strong>解析</strong>：反向传播是训练多层神经网络的核心算法，它使得神经网络能够通过误差反馈不断优化自身的参数。
+    <strong>答案</strong>：反向传播算法是训练多层神经网络的核心，分两步：①前向传播：输入数据经各层计算得到预测值，同时计算预测值与真实值的损失；②反向传播：从输出层开始，用链式求导法则计算损失相对于各层参数（权重、偏置）的梯度，再沿梯度反方向更新参数，最小化损失。<br><br>
+    <strong>解析</strong>：反向传播的关键是“误差反向传递”——输出层梯度直接由损失函数计算，隐藏层梯度依赖后一层梯度，实现全网络参数的优化。
   </div>
 </details>
 
@@ -230,26 +228,25 @@
 <details style="margin: 10px 0; padding: 8px; background: #f5f5f5; border-radius: 4px;">
   <summary style="cursor: pointer; font-weight: bold;">点击查看答案</summary>
   <div style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ccc;">
-    <strong>答案</strong>：梯度下降法的基本思想是通过计算损失函数的梯度，沿着梯度的反方向逐步更新参数，以最小化损失函数。<br><br>
-    <strong>解析</strong>：梯度下降法的核心在于利用梯度信息指导参数更新，从而逐步逼近最优解。
+    <strong>答案</strong>：梯度下降法的基本思想是：为找到损失函数的最小值，先计算损失函数在当前参数处的梯度（梯度方向是函数值上升最快的方向），再沿梯度反方向（函数值下降最快的方向）逐步更新参数，迭代此过程直至损失收敛。<br><br>
+    <strong>解析</strong>：梯度下降通过“小步迭代”逼近最优解，学习率控制步长（步长过大易震荡，过小训练慢），是深度学习中参数优化的基础算法。
   </div>
 </details>
 
 
-<!-- 核心判分函数（确保能定位到所有元素） -->
+<!-- 修复后的核心判分脚本（无语法错误，精准定位元素） -->
 <script>
-// 单选题/判断题判分（修复元素定位）
+// 单选题/判断题判分（支持单选按钮选中识别）
 function checkSingle(questionName, correctId, explanation) {
-  // 精准定位当前题的选中选项
+  // 精准定位当前题的选中radio
   const selected = document.querySelector(`input[name="${questionName}"][type="radio"]:checked`);
   const resDiv = document.getElementById(`res-${questionName}`);
-  
+
   if (!selected) {
     resDiv.innerHTML = "<span style='color: #ff7f0e;'>请先选择一个选项再提交！</span>";
     return;
   }
-  
-  // 对比选中选项的id与正确答案id
+
   if (selected.id === correctId) {
     resDiv.innerHTML = `<span style='color: #2ca02c;'>✅ 回答正确！</span><br>${explanation}`;
   } else {
@@ -258,38 +255,39 @@ function checkSingle(questionName, correctId, explanation) {
   }
 }
 
-// 多选题判分（修复多选逻辑）
+// 多选题判分（支持多选按钮选中识别）
 function checkMulti(questionName, correctIds, explanation) {
-  // 获取当前题所有选中的复选框
-  const selected = Array.from(document.querySelectorAll(`input[name="${questionName}"][type="checkbox"]:checked`)).map(el => el.id);
+  // 定位当前题的所有选中checkbox
+  const selected = Array.from(
+    document.querySelectorAll(`input[name="${questionName}"][type="checkbox"]:checked`)
+  ).map(el => el.id);
   const resDiv = document.getElementById(`res-${questionName}`);
-  
+
   if (selected.length === 0) {
     resDiv.innerHTML = "<span style='color: #ff7f0e;'>请至少选择一个选项再提交！</span>";
     return;
   }
-  
-  // 排序后对比（避免选择顺序影响结果）
+
+  // 排序对比，避免选择顺序影响结果
   const isCorrect = JSON.stringify(selected.sort()) === JSON.stringify(correctIds.sort());
   const correctLabels = correctIds.map(id => document.querySelector(`label[for="${id}"]`).textContent).join("、");
-  
-  resDiv.innerHTML = isCorrect ? 
-    `<span style='color: #2ca02c;'>✅ 回答正确！</span><br>${explanation}` : 
-    `<span style='color: #d62728;'>❌ 回答错误！</span><br>正确答案：${correctLabels}<br>${explanation}`;
+
+  resDiv.innerHTML = isCorrect 
+    ? `<span style='color: #2ca02c;'>✅ 回答正确！</span><br>${explanation}` 
+    : `<span style='color: #d62728;'>❌ 回答错误！</span><br>正确答案：${correctLabels}<br>${explanation}`;
 }
 
-// 填空题判分（修复输入框取值）
+// 填空题判分（支持输入框取值与验证）
 function checkFill(inputId, correctAnswer, explanation) {
-  // 精准定位当前题的输入框
   const inputEl = document.getElementById(inputId);
   const userAnswer = inputEl.value.trim();
   const resDiv = document.getElementById(`res-${inputId}`);
-  
+
   if (!userAnswer) {
     resDiv.innerHTML = "<span style='color: #ff7f0e;'>请先填写答案再提交！</span>";
     return;
   }
-  
+
   // 忽略空格和大小写，兼容多种输入格式
   const normalize = str => str.replace(/\s+/g, '').toLowerCase();
   if (normalize(userAnswer) === normalize(correctAnswer)) {
